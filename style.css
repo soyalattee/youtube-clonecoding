@@ -1,0 +1,235 @@
+:root {
+  --main-color: #102027;
+  --font-color: #fafafa;
+  --font-silver-color: #757575;
+  --tag-color: #63a4ff;
+  --border-color: #e0e0e0;
+  --font-small-size: 14px;
+  --font-medium-size: 16px;
+  --font-large-size: 24px;
+  --size-margin: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Roboto;
+}
+button,
+button:focus {
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background-color: white;
+}
+.nav__bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--main-color);
+  color: var(--font-color);
+}
+.logo {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: var(--font-large-size);
+  margin-left: var(--size-margin);
+}
+.logo i {
+  color: red;
+  margin: var(--size-margin);
+  font-size: large;
+}
+
+ul {
+  margin: var(--size-margin);
+  padding: 0;
+  display: flex;
+  list-style: none;
+}
+li {
+  margin: var(--size-margin);
+}
+li i {
+  color: var(--font-color);
+}
+
+.video {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  background-color: black;
+}
+.video video {
+  width: 100%;
+  height: 80%;
+  max-width: 1000px;
+}
+.video__info {
+  color: var(--font-silver-color);
+}
+
+/* 비디오 정보 */
+.information {
+  display: flex;
+  flex-direction: column;
+  margin: calc(var(--size-margin) * 2);
+}
+.information__title__bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.information .video__tags {
+  color: var(--tag-color);
+}
+.title__box {
+  display: flex;
+  flex-direction: row;
+}
+.title__box button {
+  height: 100%;
+}
+
+.title__box button.clicked {
+  transform: rotate(180deg);
+}
+/* line clamp 일정 줄을 넘어갈시 생략 시켜준다 */
+.title__box .title {
+  font-size: var(--font-medium-size);
+  transition: transform 300ms ease-in-out;
+}
+.title__box .title.clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.information__view__date {
+  display: flex;
+  color: var(--font-silver-color);
+  font-size: var(--font-small-size);
+}
+.information__view__date p {
+  color: var(--font-silver-color);
+}
+.video__info ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.video__info ul li i {
+  cursor: pointer;
+  margin-bottom: calc(var(--size-margin) / 2);
+  font-size: var(--font-medium-size);
+  color: var(--font-silver-color);
+}
+.video__info ul li i.active {
+  color: var(--tag-color);
+}
+
+/* 유튜버 정보 */
+.youtuber__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-color: var(--border-color);
+  border-width: 1px 0px;
+  border-style: solid;
+  padding: var(--size-margin) 0px;
+}
+.youtuber {
+  display: flex;
+  align-items: center;
+}
+.youtuber img {
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  font-weight: 50px;
+  padding-top: 4px;
+  padding-right: var(--size-margin);
+  border-radius: 50%;
+}
+.youtuber > .youtuber__info__description {
+  font-weight: 800;
+  font-size: var(--font-midium-size);
+}
+.youtuber > .youtuber__info__description > :last-child {
+  font-size: var(--font-small-size);
+  color: var(--font-silver-color);
+}
+.subscribe__btn {
+  cursor: pointer;
+  font-weight: 800;
+  color: var(--font-silver-color);
+}
+
+/* 다음 영상 */
+.video__recommended {
+  margin: calc(var(--size-margin) * 2);
+}
+.video__recommended > p {
+  color: var(--font-silver-color);
+  font-weight: 800;
+  font-size: var(--font-medium-size);
+}
+.video__recommended ul {
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+}
+.video__recommended ul li {
+  display: flex;
+  margin: var(--size-margin) 0px;
+}
+.description__title {
+  display: flex;
+  flex-direction: row;
+  color: black;
+  font-size: var(--font-medium-size);
+  font-weight: 900;
+}
+.video__recommended i {
+  cursor: pointer;
+  padding-top: var(--size-margin);
+  margin-left: var(--size-margin);
+  color: black;
+}
+ul li img {
+  width: 100%;
+  flex: 1 1 35%;
+}
+ul li button {
+  height: 100%;
+  flex: 1 1 5%;
+}
+.description {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-small-size);
+  padding-left: var(--size-margin);
+  color: var(--font-silver-color);
+  font-weight: 800;
+}
+
+.videoInfoAndReco {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1068px) {
+  .videoInfoAndReco {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
