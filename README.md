@@ -23,6 +23,8 @@ HTML, CSS, JavaScript
   -webkit-line-clamp: 2;
   overflow: hidden; 
 ````
+- 미디어 쿼리를 이용한 반응형 사이트(레이어 구조 변경)
+
 - 자바스크립트 classList.toggle 을 이용하여 클래스를 toogle 할 수 있다. 
 
 ## 이용한 참고 사이트 
